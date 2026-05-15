@@ -1,0 +1,4 @@
+# Example targets. Replace with assets you own or have permission to assess.
+example.com
+93.184.216.34
+

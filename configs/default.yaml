@@ -1,0 +1,50 @@
+network:
+  timeout_seconds: 10
+  rate_limit_per_second: 2
+  max_concurrency: 5
+  user_agent: ReconForge/0.1 authorized-security-assessment
+
+safety:
+  allow_private_networks: false
+  require_authorization_for_active_modules: true
+  max_targets_per_run: 100
+
+dns:
+  nameservers: []
+  record_types:
+    - A
+    - AAAA
+    - MX
+    - NS
+    - TXT
+    - CAA
+    - SOA
+
+http:
+  follow_redirects: true
+  max_body_bytes: 250000
+  fetch_robots: true
+
+tls:
+  default_port: 443
+
+passive_sources:
+  certificate_transparency:
+    enabled: true
+    max_results: 200
+  geolocation:
+    enabled: true
+    provider: ipwhois
+  reverse_ip:
+    enabled: false
+    endpoint: ""
+    query_param: q
+    api_key_env: ""
+    api_key_header: Authorization
+  reverse_whois:
+    enabled: false
+    endpoint: ""
+    query_param: q
+    api_key_env: ""
+    api_key_header: Authorization
+
